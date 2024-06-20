@@ -6,11 +6,7 @@ const fs = require("fs");
 const path = require("path");
 
 module.exports = {
-  content: [
-    "./js/**/*.{js,ts,svelte}",
-    "../lib/app_web.ex",
-    "../lib/app_web/**/*.*ex",
-  ],
+  content: ["./js/**/*.{js,ts,svelte}", "../lib/app_web.ex", "../lib/app_web/**/*.*ex"],
   theme: {
     extend: {
       colors: {
@@ -26,25 +22,16 @@ module.exports = {
     //     <div class="phx-click-loading:animate-ping">
     //
     plugin(({ addVariant }) =>
-      addVariant("phx-no-feedback", [".phx-no-feedback&", ".phx-no-feedback &"])
+      addVariant("phx-no-feedback", [".phx-no-feedback&", ".phx-no-feedback &"]),
     ),
     plugin(({ addVariant }) =>
-      addVariant("phx-click-loading", [
-        ".phx-click-loading&",
-        ".phx-click-loading &",
-      ])
+      addVariant("phx-click-loading", [".phx-click-loading&", ".phx-click-loading &"]),
     ),
     plugin(({ addVariant }) =>
-      addVariant("phx-submit-loading", [
-        ".phx-submit-loading&",
-        ".phx-submit-loading &",
-      ])
+      addVariant("phx-submit-loading", [".phx-submit-loading&", ".phx-submit-loading &"]),
     ),
     plugin(({ addVariant }) =>
-      addVariant("phx-change-loading", [
-        ".phx-change-loading&",
-        ".phx-change-loading &",
-      ])
+      addVariant("phx-change-loading", [".phx-change-loading&", ".phx-change-loading &"]),
     ),
 
     // Embeds Heroicons (https://heroicons.com) into your app.css bundle
@@ -91,7 +78,7 @@ module.exports = {
             };
           },
         },
-        { values }
+        { values },
       );
     }),
   ],
