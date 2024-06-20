@@ -42,3 +42,6 @@ npm-debug.log
 # Ignore Node.js module for Inertia.js SSR
 /priv/ssr.js
 
+# Ignore environment variables file
+.env
+
