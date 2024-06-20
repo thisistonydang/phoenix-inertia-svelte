@@ -28,6 +28,7 @@ import axios from "axios";
 axios.defaults.xsrfHeaderName = "x-csrf-token";
 
 createInertiaApp({
+  page: undefined,
   resolve: async (name) => await import(`./pages/${name}.svelte`),
   setup({ el, App }) {
     new App({ target: el, hydrate: true });
