@@ -10,15 +10,18 @@ defmodule App.Application do
     children = [
       AppWeb.Telemetry,
       App.Repo,
-      {Ecto.Migrator,
-        repos: Application.fetch_env!(:app, :ecto_repos),
-        skip: skip_migrations?()},
+      {Ecto.Migrator, repos: Application.fetch_env!(:app, :ecto_repos), skip: skip_migrations?()},
       {DNSCluster, query: Application.get_env(:app, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: App.PubSub},
       # Start the Finch HTTP client for sending emails
       {Finch, name: App.Finch},
       # Start a worker by calling: App.Worker.start_link(arg)
       # {App.Worker, arg},
+
+      # Start the SSR process pool
+      # You must specify a `path` option to locate the directory where the `ssr.js` file lives.
+      {Inertia.SSR, path: Path.join([Application.app_dir(:app), "priv"])},
+
       # Start to serve requests, typically the last entry
       AppWeb.Endpoint
     ]
