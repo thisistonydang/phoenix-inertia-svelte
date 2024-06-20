@@ -39,3 +39,6 @@ npm-debug.log
 *.db
 *.db-*
 
+# Ignore Node.js module for Inertia.js SSR
+/priv/ssr.js
+
