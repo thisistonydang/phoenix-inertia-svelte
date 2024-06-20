@@ -22,7 +22,8 @@ config :app, AppWeb.Endpoint,
   debug_errors: true,
   secret_key_base: "EXk52X6f35PsgrkSE+tqsPCVhds4hIjHT5h0jTG6N11ffrRLbZ84/uoyaEinMvkC",
   watchers: [
-    esbuild: {Esbuild, :install_and_run, [:app, ~w(--sourcemap=inline --watch)]},
+    node: ["build.js", "--watch", cd: Path.expand("../assets", __DIR__)],
+    node: ["build.js", "--watch", "--ssr", cd: Path.expand("../assets", __DIR__)],
     tailwind: {Tailwind, :install_and_run, [:app, ~w(--watch)]}
   ]
 
