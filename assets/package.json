@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "esbuild": "^0.21.5",
+    "esbuild-svelte": "^0.8.1"
+  },
+  "dependencies": {
+    "@inertiajs/svelte": "^1.2.0",
+    "phoenix": "file:../deps/phoenix",
+    "phoenix_html": "file:../deps/phoenix_html",
+    "phoenix_live_view": "file:../deps/phoenix_live_view"
+  }
+}
