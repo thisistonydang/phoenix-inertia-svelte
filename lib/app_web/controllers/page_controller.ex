@@ -2,8 +2,9 @@ defmodule AppWeb.PageController do
   use AppWeb, :controller
 
   def home(conn, _params) do
-    # The home page is often custom made,
-    # so skip the default app layout.
-    render(conn, :home, layout: false)
+    conn
+    |> assign(:page_title, "Home Page")
+    |> assign_prop(:name, "Phoenix + Inertia.js + Svelte")
+    |> render_inertia("Home")
   end
 end
