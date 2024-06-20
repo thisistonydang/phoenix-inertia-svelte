@@ -22,7 +22,7 @@ If there's a mistake or you have any suggestions for improvement, please feel fr
 
 ## Live Demo
 
-A live demo of the project in this repo can be found [here]().
+A live demo of the project in this repo can be found [here](https://phoenix-inertia-svelte.fly.dev/).
 
 ## Inertia and Svelte Setup Guide
 
