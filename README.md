@@ -9,7 +9,7 @@ In addition to setting up Inertia and Svelte, there is an [optional section](#ex
 - [Path Aliases](#path-aliases)
 - [Prettier](#prettier)
 - [ESLint](#eslint)
-- [DaisyUI](#daisyui)
+- [daisyUI](#daisyui)
 - [Font Awesome Icons](#font-awesome-icons)
 - [Environment Variables](#environment-variables)
 - [Local network development](#local-network-development)
@@ -104,7 +104,7 @@ export function render(page) {
 
 ### Add a custom `esbuild` build script
 
-When using Svelte with Esbuild, the `esbuild-svelte` plugin is required to compile Svelte components. However, Phoenix's default configuration of `esbuild` (via the Elixir wrapper) does not allow you to use `esbuild` plugins so we need to create a custom build script that will handle both the client-side and server-side builds.
+When using Svelte with `esbuild`, the `esbuild-svelte` plugin is required to compile Svelte components. However, Phoenix's default configuration of `esbuild` (via the Elixir wrapper) does not allow you to use `esbuild` plugins so we need to create a custom build script that will handle both the client-side and server-side builds.
 
 More information about creating custom `esbuild` scripts can be found in the official Phoenix [documentation](https://hexdocs.pm/phoenix/asset_management.html#esbuild-plugins).
 
@@ -181,7 +181,7 @@ if (watch) {
 
 ### Update Tailwind configuration
 
-When generating the client-side bundle, the above `build.js` script may generate an `app.css` file in addition to the `app.js` file and place both into the `priv/static/assets` directory. The reason for this because Svelte will generate hashed class names in order to [scope styles](https://svelte.dev/docs/svelte-components#style) to the component.
+When generating the client-side bundle, the above `build.js` script may generate an `app.css` file, in addition to the `app.js` file, and place it into the `priv/static/assets` directory. The reason for this because Svelte will generate hashed class names in order to [scope styles](https://svelte.dev/docs/svelte-components#style) to the component.
 
 Since the standard Phoenix Tailwind configuration already generates an `app.css` into the same directory, we need to update the Tailwind configuration to specify a different output name to avoid conflict.
 
@@ -202,7 +202,7 @@ config :tailwind,
 
 Please note that an `app.css` file will not be generated if you are not using CSS styles within a `<style>` block in your Svelte components. However, it is still recommended to update the Tailwind configuration because it is possible that an `app.css` file may be generated if you use certain Svelte component libraries that include scoped styles.
 
-Since the `app.css` may not be generated, please either manually add the `app.css` file in order to not get a 404 error if it's requested.
+Since the `app.css` may not be generated, please manually add the `app.css` file in order to not get a 404 error if it's requested.
 
 ```sh
 touch priv/static/assets/app.css
@@ -225,7 +225,7 @@ Since we renamed the Tailwind output file, we need to update our root Phoenix la
 </head>
 ```
 
-**Note:** If you're 100% sure you won't be using any scoped CSS styles in your Svelte components, you can also remove the `app.css` link from the root layout, but again this is not suggested.
+**Note:** If you're 100% sure you won't be using any scoped CSS styles in your Svelte components, you can also remove the `app.css` link from the root layout, but again, this is not suggested.
 
 Lastly, since we are using Svelte, we also need to update the Tailwind configuration to include `.svelte` files.
 
@@ -728,9 +728,9 @@ Add scripts for lint check.
 }
 ```
 
-### DaisyUI
+### daisyUI
 
-[DaisyUI](https://daisyui.com/) is a set of utility classes that can be used with Tailwind CSS to speed up development.
+[daisyUI](https://daisyui.com/) is a set of utility classes that can be used with Tailwind CSS to speed up development.
 
 Install dependencies.
 
@@ -738,7 +738,7 @@ Install dependencies.
 npm --prefix assets install -D daisyui@latest
 ```
 
-Add DaisyUI to Tailwind configuration.
+Add daisyUI to Tailwind configuration.
 
 ```js
 // assets/tailwind.config.js
@@ -765,7 +765,7 @@ module.exports = {
 }
 ```
 
-Remove `bg-white` class from root template. DaisyUI handles setting the bg color.
+Remove `bg-white` class from root template. daisyUI handles setting the bg color.
 
 ```diff
 <!-- lib/app_web/components/layouts/root.html.heex -->
