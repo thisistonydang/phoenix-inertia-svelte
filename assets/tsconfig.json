@@ -10,7 +10,11 @@
     "isolatedModules": true,
     "moduleDetection": "force",
     "noEmit": true,
-    "importHelpers": true
+    "importHelpers": true,
+    "baseUrl": ".",
+    "paths": {
+      "$lib/*": ["js/lib/*"]
+    }
   },
   "include": ["js/**/*.ts", "js/**/*.svelte"]
 }
