@@ -9,7 +9,7 @@
   let count = 0;
 </script>
 
-<div class="space-y-3">
+<div class="space-y-4">
   <h1 class="flex items-center gap-1 font-bold">
     Hello from {name}!
     <Fa class="text-red-500" icon={faHeart} />
@@ -30,4 +30,13 @@
   <button class="btn" on:click={() => count++}>
     Clicked: {count}
   </button>
+
+  <p>
+    A guide for setting up this project can be found on
+    <Link href="https://github.com/tonydangblog/phoenix-inertia-svelte">GitHub</Link>.
+  </p>
+
+  <p class="text-sm">
+    Created by <Link href="https://tonydang.blog">Tony Dang</Link>.
+  </p>
 </div>
