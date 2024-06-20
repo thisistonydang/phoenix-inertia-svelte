@@ -1,5 +1,9 @@
 {
   "type": "module",
+  "scripts": {
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch"
+  },
   "devDependencies": {
     "@tsconfig/svelte": "^5.0.4",
     "@types/node": "^20.14.6",
