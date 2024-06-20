@@ -503,7 +503,7 @@ npm --prefix assets install -D \
 
 Add a `tsconfig.json`.
 
-```json
+```js
 // assets/tsconfig.json
 {
   "extends": "@tsconfig/svelte/tsconfig.json",
@@ -627,7 +627,7 @@ npm --prefix assets install -D \
 
 Add a `.prettierrc` file.
 
-```json
+```js
 // assets/.prettierrc
 {
   "printWidth": 100,
