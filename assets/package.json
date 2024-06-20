@@ -5,13 +5,18 @@
     "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch"
   },
   "devDependencies": {
+    "@tailwindcss/forms": "^0.5.7",
     "@tsconfig/svelte": "^5.0.4",
     "@types/node": "^20.14.6",
     "@types/phoenix": "^1.6.5",
     "@types/phoenix_live_view": "^0.18.5",
     "esbuild": "^0.21.5",
     "esbuild-svelte": "^0.8.1",
+    "prettier": "^3.3.2",
+    "prettier-plugin-svelte": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.6.5",
     "svelte-check": "^3.8.1",
+    "tailwindcss": "^3.4.4",
     "tslib": "^2.6.3",
     "typescript": "^5.5.2"
   },
