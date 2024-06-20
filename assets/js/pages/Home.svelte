@@ -21,10 +21,12 @@
     and hydrated on the client with the
     <Link href="https://inertiajs.com/client-side-setup">@inertiajs/svelte</Link> library.
   </p>
+
   <p>
     Try disabling JS and reloading the page. You will see that the HTML is indeed rendered from the
     server, and the button below will not work since it requires JavaScript.
   </p>
+
   <button class="btn" on:click={() => count++}>
     Clicked: {count}
   </button>
