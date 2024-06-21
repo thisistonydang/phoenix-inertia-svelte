@@ -181,7 +181,7 @@ if (watch) {
 
 ### Update Tailwind configuration
 
-When generating the client-side bundle, the above `build.js` script may generate an `app.css` file, in addition to the `app.js` file, and place it into the `priv/static/assets` directory. The reason for this because Svelte will generate hashed class names in order to [scope styles](https://svelte.dev/docs/svelte-components#style) to the component.
+When generating the client-side bundle, the above `build.js` script may generate an `app.css` file, in addition to the `app.js` file, and place it into the `priv/static/assets` directory. The reason for this is because Svelte will generate hashed class names in order to [scope styles](https://svelte.dev/docs/svelte-components#style) to the component.
 
 Since the standard Phoenix Tailwind configuration already generates an `app.css` into the same directory, we need to update the Tailwind configuration to specify a different output name to avoid conflict.
 
