@@ -1,6 +1,6 @@
 # Phoenix with Inertia.js and Svelte ❤️
 
-This repo contains an example project and guide for setting up [Phoenix](https://www.phoenixframework.org/) with [Inertia.js](https://inertiajs.com/) and [Svelte](https://svelte.dev/), including server-side rendering (SSR).
+This repo contains an example project and guide for setting up [Phoenix](https://www.phoenixframework.org/) with [Inertia.js](https://inertiajs.com/) and [Svelte](https://svelte.dev/), including server-side rendering (SSR), using the official [inertia-phoenix](https://github.com/inertiajs/inertia-phoenix) adapter maintained by [SavvyCal](https://savvycal.com/).
 
 In addition to setting up Inertia and Svelte, there is an [optional section](#extra-setup-optional) that covers setup for:
 
@@ -344,12 +344,9 @@ config :inertia,
   static_paths: ["/assets/app.js"],
   default_version: "1",
 - ssr: false,
-- raise_on_ssr_failure: true
 + ssr: true,
-+ raise_on_ssr_failure: config_env() != :prod
+  raise_on_ssr_failure: config_env() != :prod
 ```
-
-**Note:** Changing the `raise_on_ssr_failure` option is optional. Here we are enabling it in development and test environments to help catch errors during SSR. In production, it is set to `false` to prevent crashes if an error occurs during SSR.
 
 ### Remove `esbuild` (the Elixir Wrapper)
 
