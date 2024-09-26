@@ -33,10 +33,10 @@
 
   <p>
     A guide for setting up this project can be found on
-    <Link href="https://github.com/tonydangblog/phoenix-inertia-svelte">GitHub</Link>.
+    <Link href="https://github.com/thisistonydang/phoenix-inertia-svelte">GitHub</Link>.
   </p>
 
   <p class="text-sm">
-    Created by <Link href="https://tonydang.blog">Tony Dang</Link>.
+    Created by <Link href="https://tonydang.com">Tony Dang</Link>.
   </p>
 </div>
